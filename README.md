@@ -4,11 +4,11 @@
 
 This small npm package allows to display every holidays for a given country and given name.
 
-## get the package
+## try the package
 
 The command to use is :
 
-`npm install @sylber/holidates-cli`
+`npx @sylber/holidates-cli [country] [year]`
 
 ## how to use
 
