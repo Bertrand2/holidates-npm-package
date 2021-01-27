@@ -1,12 +1,12 @@
 class Countries {
-	constructor(){
+	constructor(countries){
 		this.countries = [ 
 			{name: 'Afghanistan', code: 'AF'}, 
 			{name: 'Åland Islands', code: 'AX'}, 
 			{name: 'Albania', code: 'AL'}, 
 			{name: 'Algeria', code: 'DZ'}, 
 			{name: 'American Samoa', code: 'AS'}, 
-			{name: 'AndorrA', code: 'AD'}, 
+			{name: 'Andorra', code: 'AD'}, 
 			{name: 'Angola', code: 'AO'}, 
 			{name: 'Anguilla', code: 'AI'}, 
 			{name: 'Antarctica', code: 'AQ'}, 
@@ -51,7 +51,7 @@ class Countries {
 			{name: 'Colombia', code: 'CO'}, 
 			{name: 'Comoros', code: 'KM'}, 
 			{name: 'Congo', code: 'CG'}, 
-			{name: 'Congo, The Democratic Republic of the', code: 'CD'}, 
+			{name: 'Democratic Republic of the Congo', code: 'CD'}, 
 			{name: 'Cook Islands', code: 'CK'}, 
 			{name: 'Costa Rica', code: 'CR'}, 
 			{name: 'Cote D\'Ivoire', code: 'CI'}, 
@@ -70,7 +70,7 @@ class Countries {
 			{name: 'Eritrea', code: 'ER'}, 
 			{name: 'Estonia', code: 'EE'}, 
 			{name: 'Ethiopia', code: 'ET'}, 
-			{name: 'Falkland Islands (Malvinas)', code: 'FK'}, 
+			{name: 'Falkland Islands', code: 'FK'}, 
 			{name: 'Faroe Islands', code: 'FO'}, 
 			{name: 'Fiji', code: 'FJ'}, 
 			{name: 'Finland', code: 'FI'}, 
@@ -96,14 +96,14 @@ class Countries {
 			{name: 'Guyana', code: 'GY'}, 
 			{name: 'Haiti', code: 'HT'}, 
 			{name: 'Heard Island and Mcdonald Islands', code: 'HM'}, 
-			{name: 'Holy See (Vatican City State)', code: 'VA'}, 
+			{name: 'Vatican', code: 'VA'}, 
 			{name: 'Honduras', code: 'HN'}, 
 			{name: 'Hong Kong', code: 'HK'}, 
 			{name: 'Hungary', code: 'HU'}, 
 			{name: 'Iceland', code: 'IS'}, 
 			{name: 'India', code: 'IN'}, 
 			{name: 'Indonesia', code: 'ID'}, 
-			{name: 'Iran, Islamic Republic Of', code: 'IR'}, 
+			{name: 'Iran', code: 'IR'}, 
 			{name: 'Iraq', code: 'IQ'}, 
 			{name: 'Ireland', code: 'IE'}, 
 			{name: 'Isle of Man', code: 'IM'}, 
@@ -130,7 +130,7 @@ class Countries {
 			{name: 'Lithuania', code: 'LT'}, 
 			{name: 'Luxembourg', code: 'LU'}, 
 			{name: 'Macao', code: 'MO'}, 
-			{name: 'Macedonia, The Former Yugoslav Republic of', code: 'MK'}, 
+			{name: 'Macedonia', code: 'MK'}, 
 			{name: 'Madagascar', code: 'MG'}, 
 			{name: 'Malawi', code: 'MW'}, 
 			{name: 'Malaysia', code: 'MY'}, 
@@ -143,8 +143,8 @@ class Countries {
 			{name: 'Mauritius', code: 'MU'}, 
 			{name: 'Mayotte', code: 'YT'}, 
 			{name: 'Mexico', code: 'MX'}, 
-			{name: 'Micronesia, Federated States of', code: 'FM'}, 
-			{name: 'Moldova, Republic of', code: 'MD'}, 
+			{name: 'Federated States of Micronesia', code: 'FM'}, 
+			{name: 'Moldova', code: 'MD'}, 
 			{name: 'Monaco', code: 'MC'}, 
 			{name: 'Mongolia', code: 'MN'}, 
 			{name: 'Montserrat', code: 'MS'}, 
@@ -168,7 +168,7 @@ class Countries {
 			{name: 'Oman', code: 'OM'}, 
 			{name: 'Pakistan', code: 'PK'}, 
 			{name: 'Palau', code: 'PW'}, 
-			{name: 'Palestinian Territory, Occupied', code: 'PS'}, 
+			{name: 'Palestine', code: 'PS'}, 
 			{name: 'Panama', code: 'PA'}, 
 			{name: 'Papua New Guinea', code: 'PG'}, 
 			{name: 'Paraguay', code: 'PY'}, 
@@ -182,7 +182,7 @@ class Countries {
 			{name: 'Reunion', code: 'RE'}, 
 			{name: 'Romania', code: 'RO'}, 
 			{name: 'Russian Federation', code: 'RU'}, 
-			{name: 'RWANDA', code: 'RW'}, 
+			{name: 'Rwanda', code: 'RW'}, 
 			{name: 'Saint Helena', code: 'SH'}, 
 			{name: 'Saint Kitts and Nevis', code: 'KN'}, 
 			{name: 'Saint Lucia', code: 'LC'}, 
@@ -212,9 +212,9 @@ class Countries {
 			{name: 'Sweden', code: 'SE'}, 
 			{name: 'Switzerland', code: 'CH'}, 
 			{name: 'Syrian Arab Republic', code: 'SY'}, 
-			{name: 'Taiwan, Province of China', code: 'TW'}, 
+			{name: 'Taiwan', code: 'TW'}, 
 			{name: 'Tajikistan', code: 'TJ'}, 
-			{name: 'Tanzania, United Republic of', code: 'TZ'}, 
+			{name: 'Tanzania', code: 'TZ'}, 
 			{name: 'Thailand', code: 'TH'}, 
 			{name: 'Timor-Leste', code: 'TL'}, 
 			{name: 'Togo', code: 'TG'}, 
@@ -237,8 +237,8 @@ class Countries {
 			{name: 'Vanuatu', code: 'VU'}, 
 			{name: 'Venezuela', code: 'VE'}, 
 			{name: 'Viet Nam', code: 'VN'}, 
-			{name: 'Virgin Islands, British', code: 'VG'}, 
-			{name: 'Virgin Islands, U.S.', code: 'VI'}, 
+			{name: 'British Virgin Islands', code: 'VG'}, 
+			{name: 'U.S. Virgin Islands', code: 'VI'}, 
 			{name: 'Wallis and Futuna', code: 'WF'}, 
 			{name: 'Western Sahara', code: 'EH'}, 
 			{name: 'Yemen', code: 'YE'}, 
@@ -252,7 +252,7 @@ class Countries {
 		return result ? result.name : null;
 	}
 	getCode(name) {
-		const result = this.countries.find(element => element.name == name);
+		const result = this.countries.find( element => element.name.toLowerCase() == name.toLowerCase() );
 		return result ? result.code : null;
 	}
 	getNames() {
@@ -261,6 +261,6 @@ class Countries {
 	getCodes() {
 		return this.countries.map(element => element.code);
 	}
-} 
+}
 
 module.exports.Countries = Countries;

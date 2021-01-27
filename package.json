@@ -1,6 +1,6 @@
 {
   "name": "@sylber/holidates-cli",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "",
   "main": "index.js",
   "bin": {
@@ -9,10 +9,19 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bertrand2/npx-card.git"
+  },
   "author": "Sylber",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bertrand2/npx-card/issues"
+  },
+  "homepage": "https://github.com/Bertrand2/npx-card#readme",
   "dependencies": {
     "axios": "^0.21.1",
-    "chalk": "^4.1.0"
+    "chalk": "^4.1.0",
+    "cheerio": "^1.0.0-rc.5"
   }
 }

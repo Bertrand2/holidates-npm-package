@@ -3,6 +3,7 @@
 
 /* REQUIREMENTS */
 const axios = require('axios');
+const cheerio = require('cheerio');
 const chalk = require('chalk');
 const Countries = require('./countries.js').Countries;
 const countryList = new Countries();
@@ -30,7 +31,7 @@ const printDates = async (url) => {
 		// console.log(datesRequest);
 		formattedPrint(datesRequest.data);
 	} catch (err) {
-		console.log( `${chalk.red.bold("ERROR !")} There was an error with the request` );
+		console.log( `${chalk.red.bold("ERROR !")} There was an error with the request. Either the nager website is down or the data on the given request doesn't exist.` );
 	}
 }
 
@@ -39,18 +40,27 @@ const args = process.argv.slice(2);
 if( checkForCommand(args[0]) ) {
 	return;
 }
-const year = args.pop();
-const countryCode = countryList.getCode(args.join(" "));
+let year, countryCode;
+if( /\d+/.test(args[args.length-1]) ) {
+	year = args.pop();
+} else {
+	year = (new Date()).getUTCFullYear();
+}
+if( args.length == 1 &&  args[0].length == 2 && countryList.getName(args[0]) ) {
+	countryCode = args[0];
+} else {
+	countryCode = countryList.getCode(args.join(" "));
+}
 
 /* ERROR HANDLING */
 if( !countryCode ) {
-	console.log( `${chalk.red.bold("ERROR !")} The country submitted is not correct.\nCommand syntax : ${chalk.yellow("holidays [Country] [Year]")}\nGet the full country list by typing ${chalk.yellow("holidays -list")}` );
+	console.log( `${chalk.red.bold("ERROR !")} The country submitted is not correct.\nCommand syntax : ${chalk.yellow("holidates [Country/Country code] [Year (optionnal)]")}\nGet the full country list by typing ${chalk.yellow("holidates -list")}` );
 	return;
 } else if( !year ) {
-	console.log( `${chalk.red.bold("ERROR !")} The year submitted is not correct.\nCommand syntax : ${chalk.yellow("holidays [Country] [Year]")}` );
+	console.log( `${chalk.red.bold("ERROR !")} The year submitted is not correct.\nCommand syntax : ${chalk.yellow("holidates [Country/Country code] [Year (optionnal)]")}` );
 	return;
 }
 
-/* AXIOS REQUEST */
+/* CODE EXECUTION */
 const requestUrl = `${apiUrl}/${year}/${countryCode}`;
 printDates(requestUrl);
